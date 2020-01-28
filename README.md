@@ -34,6 +34,17 @@ In order to concatenate 2 PDFs from http://www.web.com/file1.pdf &
 http://www.web.com/file2.pdf, the following URL must be called:
 https://web-pdftk.herokuapp.com/?inputs=http://www.web.com/file1.pdf,http://www.web.com/file2.pdf&operation=cat
 
+### Real-life example
+
+Let's say one want to merge these two PDF files from Wikimedia Commons:
+https://upload.wikimedia.org/wikipedia/commons/a/a3/JUA0680291.pdf & https://upload.wikimedia.org/wikipedia/commons/7/79/Bell76.pdf
+Yet, to make it more interesting, we also want the first page of each PDF removed.
+Just resolve the following URL to do the job:
+https://web-pdftk.herokuapp.com/?inputs=https%3A%2F%2Fweb-pdftk.herokuapp.com%2F%3Finputs%3Dhttps%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F95%2FJua0680504.pdf%26operation%3Dcat%26options%3D2-end,https%3A%2F%2Fweb-pdftk.herokuapp.com%2F%3Finputs%3Dhttps%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F79%2FBell76.pdf%26operation%3Dcat%26options%3D2-end&operation=cat
+This is the kind of nested queries mentionned earlier: the main request will
+merge the PDFs (cat called without options), being given as inputs the products
+of two "subrequests", which will strip the first page off each file. 
+
 ## Credits
 
 This service relies on [pdftk](https://www.pdflabs.com/tools/pdftk-server/)
