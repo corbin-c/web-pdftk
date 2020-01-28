@@ -14,7 +14,12 @@ multiple input files, URLs must be [encoded](https://developer.mozilla.org/fr/do
 
 Chosen operation can be specified using the `operation` parameter.
 
-### Chaining
+## Options
+
+A facultative `options` parameter may be provided to pass options to the chosen
+operation.
+
+## Chaining
 
 Chaining operations is not supported. Proceed with successive calls to achieve.
 Giving the service a web-pdftk URL, creating nested queries, is a great way to
