@@ -38,7 +38,7 @@ https://web-pdftk.herokuapp.com/?inputs=http://www.web.com/file1.pdf,http://www.
 
 ### Real-life example
 
-Let's say one want to merge these two PDF files from Wikimedia Commons:
+Let's say we want to merge these two PDF files from Wikimedia Commons:
 
 https://upload.wikimedia.org/wikipedia/commons/a/a3/JUA0680291.pdf & https://upload.wikimedia.org/wikipedia/commons/7/79/Bell76.pdf
 
