@@ -7,17 +7,21 @@ Called with no parameter, this help is displayed.
 ## Inputs
 
 The `inputs` parameter is used to specify input files by their URL. To work with
-multiple input files, URLs must be comma-separated.
+multiple input files, URLs must be [encoded](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/encodeURIComponent)
+& comma-separated.
 
 ## Operations
 
 Chosen operation can be specified using the `operation` parameter. Currently
 supported operations are:
   * cat
+More operations may work, yet I haven't tested them.
 
 ### Chaining
 
 Chaining operations is not supported. Proceed with successive calls to achieve.
+Giving the service a web-pdftk URL, creating nested queries, is a great way to
+achieve chaining.
 
 ## Output
 

@@ -20,6 +20,7 @@ let getFile = (path,bin=false) => {
 };
 
 let getDistantFile = async (url) => {
+  url = decodeURIComponent(url);
   url = await fetch(url);
   if (url.ok) {
     url = await url.buffer();
@@ -41,8 +42,7 @@ let server = http.createServer(async function(req, res) {
     inputs = await Promise.all(inputs.map(e => getDistantFile(e)));
     let operation = page.searchParams.get("operation");
     let options = (page.searchParams.get("options") || "");
-    pdftk.input(inputs)
-      [operation](options)
+    pdftk.input(inputs)[operation](options)
       .output()
       .then(buffer => {
         res.writeHead(200,{"Content-Type":"application/pdf"});
