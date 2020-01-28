@@ -12,10 +12,7 @@ multiple input files, URLs must be [encoded](https://developer.mozilla.org/fr/do
 
 ## Operations
 
-Chosen operation can be specified using the `operation` parameter. Currently
-supported operations are:
-  * cat
-More operations may work, yet I haven't tested them.
+Chosen operation can be specified using the `operation` parameter.
 
 ### Chaining
 
