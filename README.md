@@ -7,7 +7,7 @@ Called with no parameter, this help is displayed.
 ## Inputs
 
 The `inputs` parameter is used to specify input files by their URL. To work with
-multiple input files, URLs must be [encoded](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/encodeURIComponent)
+multiple input files, URLs must be [encoded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
 & comma-separated.
 
 ## Operations
