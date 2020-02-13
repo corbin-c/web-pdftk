@@ -42,12 +42,13 @@ let server = http.createServer(async function(req, res) {
     inputs = await Promise.all(inputs.map(e => getDistantFile(e)));
     let operation = page.searchParams.get("operation");
     let options = (page.searchParams.get("options") || "");
-    let outmime = (operation.indexOf("dump") >= 0)
+    let outmime = (operation.indexOf("dump") < 0)
       ? "application/pdf" : "text/plain";
+    console.log(outmime);
     pdftk.input(inputs)[operation](options)
       .output()
       .then(buffer => {
-        res.writeHead(200,{"Content-Type":"application/pdf"});
+        res.writeHead(200,{"Content-Type":outmime});
         res.write(buffer);
         res.end();
       })
